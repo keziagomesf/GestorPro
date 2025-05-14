@@ -1,11 +1,25 @@
 "use client"
 
 import { CustomerProps } from "@/utils/customer.type"
+import { api } from '@/lib/api'
+import { useRouter } from 'next/navigation'
 
 export function CardCustomer({ customer }: {customer: CustomerProps}) {
+    const router = useRouter();
 
     async function handleDeleteCustomer() {
-        alert("TESTE")
+       try{
+         const response = await api.delete("/api/customer", {
+            params: {
+                id:customer.id
+            }
+        })
+
+        console.log(response.data);
+        router.refresh();
+       }catch(err){
+        console.log(err);
+       }
     }
     return(
         <article className="flex flex-col bg-gray-100 border-1 p-2 rounded-lg gap-2 hover:scale-105 duration-300">
