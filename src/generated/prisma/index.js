@@ -206,12 +206,11 @@ const config = {
     "db"
   ],
   "activeProvider": "mongodb",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": null
+        "value": "mongodb+srv://keziagomesferre:Kg161001@devcontrole.3r0fmju.mongodb.net/devcontrole?retryWrites=true&w=majority&appName=devcontrole"
       }
     }
   },
