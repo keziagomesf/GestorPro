@@ -56,7 +56,7 @@ export function FormTicket({customer}: FormTicketProps){
             </textarea>
             {errors.description?.message && <p className="text-red-500 mt-1 mb-4">{errors.description?.message}</p>}
 
-            <button type="submit" className="bg-blue-500 rounded-md w-full h-11 px-2 text-white font-bold">Cadastrar</button>
+            <button type="submit" className="bg-blue-500 rounded-md w-full h-11 px-2 text-white font-bold cursor-pointer">Cadastrar</button>
         </form>
     )
 }

@@ -19,7 +19,7 @@ export function ModalTicket(){
 
                 <div className="flex items-center justify-between mb-4">
                     <h1 className="font-bold text-lg md:text-2xl">Detalhes do chamado</h1>
-                    <button className="bg-red-500 p-1 px-2 text-white rounded" onClick={handleModalVisible}>Fechar</button>
+                    <button className="bg-red-500 p-1 px-2 text-white rounded cursor-pointer"  onClick={handleModalVisible}>Fechar</button>
                 </div>
 
                 <div className="flex flex-wrap gap-1 mb-2">
